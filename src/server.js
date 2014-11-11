@@ -1,6 +1,12 @@
-var path = require('path');
-var express = require('express');
-var app = express();
+var path = require('path'),
+    express = require('express'),
+    browserify = require('connect-browserify'),
+    app = express();
+
+app.get('/assets/bundle.js', browserify('./src/client', {
+    debug: true,
+    watch: true
+}));
 
 app
     .use('/assets', express.static('../assets'))
