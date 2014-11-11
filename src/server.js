@@ -13,6 +13,9 @@ function renderState(req, res, next) {
     var client = Application({path: req.url});
 
     ReactAsync.renderComponentToStringWithAsyncState(client, function (err, markup) {
+        if (err) {
+            next(err);
+        }
         res.send('<!DOCTYPE html>\n' + markup);
     });
 }

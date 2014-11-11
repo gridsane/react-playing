@@ -26,7 +26,7 @@ var Application = React.createClass({
                     <link rel="stylesheet" href="/assets/style.css" />
                 </head>
                 <Pages className="application" path={this.props.path}>
-                    <Page path="/" handler={Layout} />
+                    <Page path="/:locality" handler={Layout} />
                     <NotFound handler={NotFoundPage} />
                 </Pages>
             </html>
