@@ -1,0 +1,16 @@
+{
+  "name": "shri-react",
+  "version": "0.0.0",
+  "description": "Shri weather project using Reactjs",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "supervisor -i node_modules -e js,jsx ./src/server.js"
+  },
+  "dependencies": {
+    "express": "~4.10.2"
+  },
+  "devDependencies": {
+    "supervisor": "~0.6.0"
+  },
+  "author": ""
+}
