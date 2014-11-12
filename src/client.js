@@ -24,6 +24,7 @@ var Application = React.createClass({
             <html>
                 <head>
                     <link rel="stylesheet" href="/assets/style.css" />
+                    <script src="/assets/bundle.js" />
                 </head>
                 <Pages className="application" path={this.props.path}>
                     <Page path="/:locality" handler={Layout} />
