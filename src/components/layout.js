@@ -6,7 +6,8 @@ var React = require('react'),
     ReactAsync = require('react-async'),
     superagent = require('superagent'),
     Header = require('./header'),
-    Locality = require('./locality');
+    Locality = require('./locality'),
+    Fact = require('./fact');
 
 var Layout = React.createClass({
     mixins: [ReactAsync.Mixin],
@@ -31,6 +32,7 @@ var Layout = React.createClass({
             <div className="layout">
                 <Header />
                 {Locality(this.state.info)}
+                {Fact(this.state.fact)}
             </div>
         );
     }
