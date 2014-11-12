@@ -5,6 +5,7 @@
 var React = require('react'),
     ReactAsync = require('react-async'),
     superagent = require('superagent'),
+    Header = require('./header'),
     Locality = require('./locality');
 
 var Layout = React.createClass({
@@ -28,6 +29,7 @@ var Layout = React.createClass({
     render: function() {
         return (
             <div className="layout">
+                <Header />
                 {Locality(this.state.info)}
             </div>
         );

@@ -7,7 +7,11 @@ var React = require('react');
 var Locality = React.createClass({
     render: function() {
         return (
-            <h1>Погода {this.props.nameprep}</h1>
+            <div className="locality">
+                <h1 className="locality__header">
+                    Погода {this.props.nameprep}
+                </h1>
+            </div>
         );
     }
 });
