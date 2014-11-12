@@ -26,7 +26,7 @@ app.get('/assets/bundle.js', browserify('./src/client', {
 }));
 
 app
-    .use('/assets', express.static('../assets'))
+    .use('/assets', express.static(__dirname + '/../assets'))
     .use(renderState)
     .listen(9000, function () {
         console.log("Server listening on port 9000");
