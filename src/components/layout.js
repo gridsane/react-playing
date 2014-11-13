@@ -28,6 +28,17 @@ var Layout = React.createClass({
         this.type.getWeatherInfo(this.props.locality, callback);
     },
 
+    componentWillReceiveProps: function(nextProps) {
+        if (this.props.locality !== nextProps.locality) {
+            this.type.getWeatherInfo(nextProps.locality, function(err, info) {
+                if (err) {
+                    throw err;
+                }
+                this.setState(info);
+            }.bind(this));
+        }
+    },
+
     render: function() {
         return (
             <div className="layout">
