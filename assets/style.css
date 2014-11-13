@@ -38,6 +38,24 @@ body {
     background-color: #ffeaae;
 }
 
+.button-middle {
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.button-left {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-right {
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 
 /* Header
 ===================================== */
@@ -117,6 +135,10 @@ body {
 
 /* Fact
 ===================================== */
+
+.fact {
+    margin-bottom: 20px;
+}
 
 .fact__now {
     display: inline-block;

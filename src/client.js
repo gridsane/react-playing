@@ -28,6 +28,7 @@ var Application = React.createClass({
                 </head>
                 <Pages className="application" path={this.props.path}>
                     <Page path="/:locality" handler={Layout} />
+                    <Page path="/:locality/:pane" handler={Layout} />
                     <NotFound handler={NotFoundPage} />
                 </Pages>
             </html>

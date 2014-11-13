@@ -7,7 +7,8 @@ var React = require('react'),
     superagent = require('superagent'),
     Header = require('./header'),
     Locality = require('./locality'),
-    Fact = require('./fact');
+    Fact = require('./fact'),
+    Forecast = require('./forecast');
 
 var Layout = React.createClass({
     mixins: [ReactAsync.Mixin],
@@ -33,6 +34,11 @@ var Layout = React.createClass({
                 <Header />
                 {Locality(this.state.info)}
                 {Fact(this.state.fact)}
+                {Forecast({
+                    data: this.state.forecast,
+                    locality: this.props.locality,
+                    pane: this.props.pane
+                })}
             </div>
         );
     }

@@ -20,9 +20,8 @@ function renderState(req, res, next) {
     });
 }
 
-app.get('/assets/bundle.js', browserify('./src/client', {
-    debug: true,
-    watch: true
+app.use('/assets/bundle.js', browserify.serve({
+    entry: __dirname + '/client.js',
 }));
 
 app
