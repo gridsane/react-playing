@@ -179,3 +179,11 @@ body {
 .fact__details-term:after {
     content: ': ';
 }
+
+
+/* Forecast
+===================================== */
+
+.forecast__tabs {
+    margin-bottom: 10px;
+}

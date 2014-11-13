@@ -27,8 +27,7 @@ var Application = React.createClass({
                     <script src="/assets/bundle.js" />
                 </head>
                 <Pages className="application" path={this.props.path}>
-                    <Page path="/:locality" handler={Layout} />
-                    <Page path="/:locality/:pane" handler={Layout} />
+                    <Page path="/:locality/*" handler={Layout} />
                     <NotFound handler={NotFoundPage} />
                 </Pages>
             </html>
