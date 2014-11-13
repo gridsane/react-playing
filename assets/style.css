@@ -115,6 +115,7 @@ body {
 }
 
 .header__search-input {
+    -webkit-appearance: none;
     font-size: 15px;
     float: left;
     width: 190px;
